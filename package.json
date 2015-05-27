@@ -11,7 +11,7 @@
   "devDependencies": {
     "coffee-script": "^1.9.3",
     "mocha": "^2.2.5",
-    "rupert": "^0.3.2",
+    "rupert": "^0.3.3",
     "supertest": "^1.0.1"
   },
   "dependencies": {
