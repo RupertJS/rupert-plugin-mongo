@@ -6,6 +6,10 @@
   "scripts": {
     "test": "mocha --require test/util.js --compilers coffee:coffee-script/register"
   },
+  "engines" : {
+    "node" : ">=0.12",
+    "iojs": ">=1.0"
+  },
   "author": "David Souther <davidsouther@gmail.com> (https://davidsouther.com/)",
   "license": "ISC",
   "devDependencies": {
