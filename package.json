@@ -4,11 +4,12 @@
   "description": "Configurations to connect Rupert with a Mongo backend.'",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require test/util.js"
+    "test": "mocha --require test/util.js --compilers coffee:coffee-script/register"
   },
   "author": "David Souther <davidsouther@gmail.com> (https://davidsouther.com/)",
   "license": "ISC",
   "devDependencies": {
+    "coffee-script": "^1.9.3",
     "mocha": "^2.2.5",
     "rupert": "^0.3.2",
     "supertest": "^1.0.1"
