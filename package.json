@@ -1,0 +1,34 @@
+{
+  "name": "rupert-plugin-mongo",
+  "version": "0.0.0",
+  "description": "Configurations to connect Rupert with a Mongo backend.'",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require test/util.js"
+  },
+  "author": "David Souther <davidsouther@gmail.com> (https://davidsouther.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "rupert": "^0.3.2",
+    "supertest": "^1.0.1"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "express-restify-mongoose": "^1.0.1",
+    "mongodb": "^2.0.33",
+    "mongoose": "^4.0.3",
+    "mongoose-q": "0.0.17"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RupertJS/rupert-plugin-mongo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RupertJS/rupert-plugin-mongo/issues"
+  },
+  "homepage": "https://github.com/RupertJS/rupert-plugin-mongo"
+}
