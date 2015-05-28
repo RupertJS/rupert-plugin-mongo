@@ -15,7 +15,7 @@
   "devDependencies": {
     "coffee-script": "^1.9.3",
     "grunt": "^0.4.5",
-    "grunt-deploy": "^0.1.7",
+    "grunt-release": "^0.12.0",
     "mocha": "^2.2.5",
     "rupert": "^0.3.3",
     "supertest": "^1.0.1"
