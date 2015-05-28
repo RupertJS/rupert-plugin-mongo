@@ -1,6 +1,6 @@
 {
   "name": "rupert-plugin-mongo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Configurations to connect Rupert with a Mongo backend.'",
   "main": "src/config.js",
   "scripts": {
