@@ -2,7 +2,7 @@
   "name": "rupert-plugin-mongo",
   "version": "0.0.1",
   "description": "Configurations to connect Rupert with a Mongo backend.'",
-  "main": "index.js",
+  "main": "src/config.js",
   "scripts": {
     "test": "mocha --require test/util.js --compilers coffee:coffee-script/register"
   },
