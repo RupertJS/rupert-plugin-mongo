@@ -48,6 +48,8 @@ module.exports = {
       host: config.find('mongo.host', 'MONGO_HOST', config.find('hostname')),
       port: config.find('mongo.port', 'MONGO_PORT', 27017),
       dbName: dbName || config.find('mongo.database', 'MONGO_DATABASE', config.find('name')),
+      uri: config.find('mongo.uri', 'MONGO_URI', null),
+      openrest: config.find('mongo.openrest', false),
       prefix: config.find('mongo.rest.path', '/api'),
       version: config.find('mongo.rest.version', '/v1'),
       db: { native_parser: true },
@@ -61,10 +63,13 @@ module.exports = {
   },
   connectionUrl: function(dbName){
     var c = this.connectionConfig(dbName);
+    if(c.uri && c.uri.match(/^mongodb:/)){
+      return c.uri;
+    }
     var auth = (c.username && c.password) ? (c.username + ':' + c.password + '@') : '';
     var address = c.host + ':' + c.port;
     var connectionString = 'mongodb://' + auth + address + '/' + c.dbName;
-    console.log(connectionString);
+    c.uri = connectionString;
     return connectionString;
   },
   collectionUrl: function(id){
