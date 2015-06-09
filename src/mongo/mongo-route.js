@@ -6,6 +6,7 @@ var
 debug('rest.js is loaded');
 
 module.exports = function(server, config){
+
   util.setConfig(config);
   server.mongo = {
     configuration: util.connectionConfig()
@@ -17,7 +18,7 @@ module.exports = function(server, config){
     debug('Error attaching routes: ' + err)
   });
 
-  if(server.configuration.openrest){
+  if(server.mongo.configuration.rest){
     debug('Attaching rest handlers');
     ['update', 'insert', 'list', 'remove', 'retrieve']
     .map(function(op){

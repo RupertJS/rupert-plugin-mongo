@@ -49,9 +49,11 @@ module.exports = {
       port: config.find('mongo.port', 'MONGO_PORT', 27017),
       dbName: dbName || config.find('mongo.database', 'MONGO_DATABASE', config.find('name')),
       uri: config.find('mongo.uri', 'MONGO_URI', null),
-      openrest: config.find('mongo.openrest', false),
-      prefix: config.find('mongo.rest.path', '/api'),
-      version: config.find('mongo.rest.version', '/v1'),
+      rest: {
+        open: config.find('mongo.rest', false),
+        prefix: config.find('mongo.rest.prefix', '/api'),
+        version: config.find('mongo.rest.version', '/v1'),
+      },
       db: { native_parser: true },
       server: { poolSize: 5 },
       server: {
@@ -74,7 +76,7 @@ module.exports = {
   },
   collectionUrl: function(id){
     var conf = this.connectionConfig();
-    var path = conf.prefix + conf.version +'/:collection';
+    var path = conf.rest.prefix + conf.rest.version +'/:collection';
     if(id){
       path += '/:id';
     }

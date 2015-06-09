@@ -11,6 +11,11 @@ if (typeof describe === "undefined" || describe === null) {
         prefix: [],
         js: []
       }
+    },
+    mongo: {
+      rest: {
+        open: true
+      }
     }
   };
 
@@ -29,7 +34,10 @@ if (typeof describe === "undefined" || describe === null) {
       request = superroute(require('../src/mongo/mongo-route'), {
         mongo: {
           host: 'localhost',
-          database: 'tests'
+          database: 'tests',
+          rest: {
+            open: true
+          }
         }
       });
       setTimeout(done, 200);// Try to connect?
