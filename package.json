@@ -18,7 +18,7 @@
     "grunt-cli": "^0.1.13",
     "grunt-release": "^0.12.0",
     "mocha": "^2.2.5",
-    "rupert": "^0.3.3",
+    "rupert": "^0.3.6",
     "supertest": "^1.0.1"
   },
   "dependencies": {
