@@ -24,5 +24,9 @@ module.exports = {
         }
       });
     });
+  },
+  getDatabase: function(){
+    var url = util.connectionUrl();
+    return module.exports.connect(url);
   }
 };

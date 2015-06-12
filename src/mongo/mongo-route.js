@@ -1,9 +1,9 @@
 var
   MongoQ = require('./mongo-promise'),
-  debug = require('debug')('rupert:mongo'),
+  debug = require('debug')('rupert:mongo:rest'),
   util = require('../util');
 
-debug('rest.js is loaded');
+debug("Loading Mongo REST routes.");
 
 module.exports = function(server, config){
 

@@ -42,6 +42,12 @@ module.exports = {
     return json;
   },
   connectionConfig: function(dbName){
+    if(!config){
+      throw new Error(
+        "Rupert Mongo Plugin has not been initialized!" +
+        "Wait for Rupert Plugins to run before attempting a connection!"
+      );
+    }
     return {
       username: config.find('mongo.username', 'MONGO_USERNAME', ''),
       password: config.find('mongo.password', 'MONGO_PASSWORD', ''),
