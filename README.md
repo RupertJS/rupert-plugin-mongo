@@ -2,7 +2,7 @@
 
 Provides binding to a Mongo database. When Rupert starts, a connection to Mongo
 will be attached to `rupertApp.mongo`. The plugin can also expose REST
-routes to `/api/v1/:collection/:id?`, as well as REST routes to Mongoose schema.
+routes to `/api/v1/:collection/:id?`, as well as REST routes to Mongoose schema. Examaples on the [RupertJS site](https://rupertjs.io#mongo).
 
 ## Changelog
 
